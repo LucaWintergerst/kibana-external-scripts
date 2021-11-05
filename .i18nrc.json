@@ -1,0 +1,7 @@
+{
+  "prefix": "externalScripts",
+  "paths": {
+    "externalScripts": "."
+  },
+  "translations": ["translations/ja-JP.json"]
+}

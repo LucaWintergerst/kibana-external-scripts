@@ -8,4 +8,6 @@ import { ExternalScriptsPlugin } from './plugin';
 export function plugin(initializerContext: PluginInitializerContext) {
   return new ExternalScriptsPlugin(initializerContext);
 }
-export { ExternalScriptsPluginSetup, ExternalScriptsPluginStart } from './types';
+// export { ExternalScriptsPluginSetup, ExternalScriptsPluginStart } from './types';
+
+export type { ExternalScriptsPluginSetup, ExternalScriptsPluginStart } from './types';

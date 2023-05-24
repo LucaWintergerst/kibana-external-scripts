@@ -5,9 +5,9 @@ import { AppPluginStartDependencies } from './types';
 import { ExternalScriptsApp } from './components/app';
 
 export const renderApp = (
-  { notifications, http }: CoreStart,
-  { navigation }: AppPluginStartDependencies,
-  { appBasePath, element }: AppMountParameters
+    { notifications, http }: CoreStart,
+    { navigation }: AppPluginStartDependencies,
+    { appBasePath, element }: AppMountParameters
 ) => {
   ReactDOM.render(
     <ExternalScriptsApp

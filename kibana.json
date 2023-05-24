@@ -2,11 +2,13 @@
   "id": "externalScripts",
   "version": "1.0.0",
   "kibanaVersion": "kibana",
+  "description": "",
   "server": true,
   "ui": true,
   "requiredPlugins": ["navigation"],
   "optionalPlugins": [],
   "owner": {
-    "name": "PME Team"
+    "name": "PME Team",
+    "githubTeam": ""
   }
 }

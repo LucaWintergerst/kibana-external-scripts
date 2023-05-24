@@ -1,24 +1,20 @@
-import { i18n } from '@kbn/i18n';
-import { AppMountParameters, CoreSetup, CoreStart, Plugin, PluginInitializerContext } from '../../../src/core/public';
+import { CoreSetup, CoreStart, Plugin, PluginInitializerContext } from '../../../src/core/public';
 import {
   ExternalScriptsPluginSetup,
   ExternalScriptsPluginStart,
-  AppPluginStartDependencies,
 } from './types';
 import { PLUGIN_NAME } from '../common';
 import { ConfigSchema} from '../server';
 
 
 export class ExternalScriptsPlugin
-  implements Plugin<void, void> {
+  implements Plugin<ExternalScriptsPluginSetup, ExternalScriptsPluginStart> {
     private snippets: string[];
     constructor(initializerContext: PluginInitializerContext<ConfigSchema>) {
       this.snippets = initializerContext.config.get().snippets
     }
 
-  public setup(core: CoreSetup): void {
-    
-  }
+  public setup(core: CoreSetup): void {}
 
   public start(core: CoreStart): void {
     this.snippets.forEach(snippet => {

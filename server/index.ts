@@ -9,9 +9,10 @@ export function plugin(initializerContext: PluginInitializerContext) {
   return new ExternalScriptsPlugin(initializerContext);
 }
 
-export { ExternalScriptsPluginSetup, ExternalScriptsPluginStart } from './types';
+export type { ExternalScriptsPluginSetup, ExternalScriptsPluginStart } from './types';
 
-const configSchema = schema.object({"snippets": schema.arrayOf(schema.string())}) 
+
+const configSchema = schema.object({"snippets": schema.arrayOf(schema.string())})
 
 export type ConfigSchema = TypeOf<typeof configSchema>
 

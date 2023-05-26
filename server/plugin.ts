@@ -7,9 +7,11 @@ import {
 } from '../../../src/core/server';
 
 import { ExternalScriptsPluginSetup, ExternalScriptsPluginStart } from './types';
+import { defineRoutes } from './routes';
 
 export class ExternalScriptsPlugin
-  implements Plugin<ExternalScriptsPluginSetup, ExternalScriptsPluginStart> {
+  implements Plugin<ExternalScriptsPluginSetup, ExternalScriptsPluginStart>
+{
   private readonly logger: Logger;
 
   constructor(initializerContext: PluginInitializerContext) {
@@ -18,6 +20,10 @@ export class ExternalScriptsPlugin
 
   public setup(core: CoreSetup) {
     this.logger.debug('externalScripts: Setup');
+    const router = core.http.createRouter();
+
+    // Register server side APIs
+    defineRoutes(router);
 
     return {};
   }

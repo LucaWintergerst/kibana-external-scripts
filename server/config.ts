@@ -6,12 +6,11 @@
  * Side Public License, v 1.
  */
 
-import type { CoreSetup, Plugin } from '@kbn/core/server';
+import type { TypeOf } from '@kbn/config-schema';
+import { schema } from '@kbn/config-schema';
 
-export class ExternalScriptsPlugin implements Plugin {
+export type ConfigType = TypeOf<typeof ConfigSchema>;
 
-  public setup(core: CoreSetup) {}
-
-  public start() {}
-  public stop() {}
-}
+export const ConfigSchema = schema.object({
+  snippets: schema.arrayOf(schema.string()),
+});

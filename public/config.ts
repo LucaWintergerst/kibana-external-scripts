@@ -6,12 +6,6 @@
  * Side Public License, v 1.
  */
 
-import type { CoreSetup, Plugin } from '@kbn/core/server';
-
-export class ExternalScriptsPlugin implements Plugin {
-
-  public setup(core: CoreSetup) {}
-
-  public start() {}
-  public stop() {}
+export interface ConfigType {
+  snippets?: string[];
 }

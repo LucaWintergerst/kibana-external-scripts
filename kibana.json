@@ -8,7 +8,7 @@
   },
   "description": "Plugin loads external scripts for additional functionality.",
   "server": true,
-  "ui": true,
+  "ui": false,
   "requiredPlugins": [],
   "optionalPlugins": []
 }
